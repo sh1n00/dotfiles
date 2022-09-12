@@ -1,0 +1,21 @@
+references:
+  commands:
+    info: &command-info
+      name: info
+      command: |
+        docker -v
+        docker-compose -v
+
+version: 2
+jobs:
+  lint:
+    docker:
+      - image: circleci/php:7.2.34-stretch
+    steps:
+      - run: *command-info
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - lint
