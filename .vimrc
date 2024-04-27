@@ -8,8 +8,6 @@ set cursorline
 set smartindent
 " タブ幅
 set tabstop=2
-" タブを半角
-set expandtab
 " color scheme
 syntax enable
 colorscheme default
